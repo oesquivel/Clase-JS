@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- PRACTICA 13/09/2014 -->
+<html>
+    <head>
+        <title>Ejemplos JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            //Comentario
+            /*Otro comentario */
+
+            //Definicion de variables
+            var count = 0;
+            count = 1;
+            count ++;
+
+            console.log("Valor de count: ",count);
+
+            //Otros tipos de datos:
+
+            var numeroEntero = 1;
+            var numeroDecimal = 0.25;
+            var cadena = "Hola Mundo!";
+            var booleano = true;
+            var nulo = null;
+            var otroNulo = undefined;
+
+            //Objeto
+            var persona = {
+            nombre: "Bart",
+            apellido: "Simpson"
+            };
+
+            //2 formas de acceder a los atributos del objeto
+            console.log(persona.nombre);
+            console.log(persona["apellido"]);
+
+            //Arreglo
+            var primos = [2, 3, 5, 7, 11, 13, 17];
+            console.log(primos);
+
+            //ERROR >> undefined
+            console.log(primos[20]);
+            console.log("Tamaño del arreglo: "+ primos.length);
+
+            //Agregar un elemento al arreglo
+            primos[primos.length] = 19;
+
+            //Se asigna en la ultima posicion + 1 
+            //Se asigna a la última posición +1
+            console.log(primos);
+            
+            //Array es un objeto estático
+            console.log(Array.isArray(primos));
+            
+            //Array de objetos
+            var puntos = [{x: 0, y: 0},{x:25, y: 75}];
+            console.log(puntos);
+            
+            console.log(puntos[0].x);
+            console.log(puntos[1].y);
+            
+            //Objeto con arreglos
+            
+            var datos = {
+                medicion1: [ //Arreglo dimensión 0
+                            [1, 2], //Arreglo Dimensión 1
+                            [3, 4]
+                           ],
+                medicion2: [[5, 6], [7, 8]]
+            };
+            
+            console.log(datos.medicion1[0][1]);
+            console.log(datos.medicion1[1][0]);
+            
+            var x = 2, y = 3;
+            
+            console.log("igualdad " + (x === y));
+            console.log("desigualdad " + (x !== y));
+            console.log("Menor que " + (x < y));
+            console.log("Mayor que " + (x > y));
+            console.log("Menor o igual que " + (x <= y));
+            console.log("Mayor o igual que " + (x >= y));
+            
+            var a = "two", b = "three";
+            
+            console.log("Mayor que (String) " + (a > b));
+            //Alfabéticamente tw es mayor que th
+            
+            //IGUALDAD
+            console.log(false === false);
+            
+            //AND            
+            console.log((x === 2) && (y === 3));
+            
+            //OR
+            console.log((x === 2) || (y === 3));
+            
+            //NEGACIÓN
+            console.log(!(x === y));
+            
+            //SENTENCIAS DE CONTROL
+            if ((x === 2)) 
+            	console.log("Marca1 IF");
+            
+            if ((x === 2)) {
+            	console.log("Marca2 IF");
+            }
+            
+            //ELSE
+            if (x ===1 ) {
+                console.log("No va a pasar");
+            } else {
+                console.log("Marca ELSE");
+            }
+            
+            //ELSE IF
+            if (x === 1) {
+                console.log("No va a pasar");
+            } else if (y === 3){
+                console.log("Marca ELSE IF");
+            }
+        </script>   
+    </head>
+    <body>
+        <h1>Clase 13-09-2014</h1>
+    </body>
+</html>
